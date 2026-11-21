@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>لوحة التحكم</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="brandbar"></div>
+
+<main class="wrap" id="loginView">
+  <header class="hero"><h1>دخول المسؤول</h1></header>
+  <section class="card">
+    <div id="loginError" class="msg err hidden" role="alert"></div>
+    <form id="loginForm">
+      <div class="field">
+        <label for="username">اسم المستخدم</label>
+        <input type="text" id="username" dir="ltr" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">كلمة المرور</label>
+        <input type="password" id="password" dir="ltr" autocomplete="current-password" required>
+      </div>
+      <button type="submit" id="loginBtn">دخول</button>
+    </form>
+  </section>
+</main>
+
+<main class="wrap wide hidden" id="dashView">
+  <div class="topbar">
+    <h1>المسجّلون</h1>
+    <button type="button" class="btn-ghost" id="logout">تسجيل الخروج</button>
+  </div>
+  <div id="dashError" class="msg err hidden" role="alert"></div>
+  <div class="tools">
+    <input type="search" id="search" placeholder="ابحث بالاسم أو رقم الهاتف" aria-label="بحث">
+  </div>
+  <p class="count" id="count"></p>
+  <div id="listWrap"></div>
+  <button type="button" class="btn-ghost more hidden" id="more">عرض المزيد</button>
+</main>
+
+<script src="/admin.js"></script>
+</body>
+</html>
